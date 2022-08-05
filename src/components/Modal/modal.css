@@ -1,0 +1,38 @@
+.modal-outer-container {
+  background-color: rgba(226, 223, 223, 0.5);
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  z-index: 30;
+}
+.modal-for-add-location {
+  height: auto;
+  width: 40vw;
+  background-color: white;
+  padding: 1rem;
+  position: fixed;
+  top: 20%;
+  left: 30%;
+  z-index: 10;
+}
+.leave-modal {
+  top: 4%;
+}
+.area-of-modal {
+  width: 60%;
+}
+.title-and-close-icon {
+  justify-content: flex-start;
+  font-size: 1.7rem;
+  font-family: "Nunito", sans-serif;
+  width: 100%;
+}
+.title-of-modal {
+  margin: 0 auto;
+  font-weight: bold;
+  color: var(--primary-color-dark);
+}
+
+.close-icon {
+  cursor: pointer;
+}

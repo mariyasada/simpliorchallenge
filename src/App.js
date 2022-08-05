@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { HeadingComponent } from './components/index';
+import { MainPage } from './pages/main';
+import { Toaster } from "react-hot-toast";
+import LocationPage from './pages/LocationPage';
+import DepartmentPage from './pages/DepartmentPage';
+import PositionPage from './pages/PositionPage';
+import LeavePage from './pages/Leave';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        
+        <HeadingComponent/>
+        <Routes>
+          <Route path='/' element={<MainPage/>}/>
+          <Route path="/location" element={<LocationPage/>}/>
+          <Route path="/department" element={<DepartmentPage/>}/>
+          <Route path="/position" element={<PositionPage/>}/>
+          <Route path="/leave" element={<LeavePage/>}/>
+        </Routes>   
+      <Toaster
+        position="top-right"
+        toastOptions={{ className: "toast-display", duration: 3000 }}
+      />  
+      </Router> 
     </div>
   );
 }
